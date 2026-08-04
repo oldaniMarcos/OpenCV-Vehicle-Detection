@@ -1,5 +1,7 @@
 # Vehicle Detection and Tracker with OpenCV, YOLO
 
+<img width="1280" height="720" alt="snapshot" src="https://github.com/user-attachments/assets/9712c5b0-0ee6-4347-bb76-8bec35a83bff" />
+
 The following project uses OpenCV in combination with different YOLO11 models with the goal of detecting, classifying, and counting vehicles.
 
 ## Features
