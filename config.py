@@ -1,6 +1,5 @@
 import torch
 
-MODEL_PATH = './models/yolo11m.pt'
 VIDEO_PATH = './media/sample.mp4'
 MASK_PATH = './masks/mask2.png'
 TRACKER_PATH = './trackers/bytetrack.yaml'

@@ -3,7 +3,6 @@ import cv2
 from pathlib import Path
 
 from config import (
-  MODEL_PATH,
   VIDEO_PATH,
   TRACKER_PATH,
   MASK_PATH,
@@ -22,10 +21,20 @@ from csv_logger import CSVLogger
 
 parser = argparse.ArgumentParser(description='Vehicle detection and tracking')
 parser.add_argument('--o', action='store_true', help='Save output video (default: False)')
+parser.add_argument(
+  '--model',
+  type=str,
+  choices=['n', 's', 'm', 'l', 'x'],
+  default='m',
+  help='YOLO model size: n=nano, s=small, m=medium (default), l=large, x=extra-large'
+)
 args = parser.parse_args()
 
+model_path = f'./models/yolo11{args.model}.pt'
+print(f"Using YOLO model: {model_path}")
+
 detector = Detector(
-  model_path=MODEL_PATH,
+  model_path=model_path,
   tracker_path=TRACKER_PATH,
   confidence_threshold=CONFIDENCE_THRESHOLD,
   vehicle_classes=VEHICLE_CLASSES,
