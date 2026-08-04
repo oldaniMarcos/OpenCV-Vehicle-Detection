@@ -1,0 +1,13 @@
+{
+  "total_vehicles": 122,
+  "lanes": {
+    "left": 2,
+    "center": 64,
+    "right": 43
+  },
+  "classes": {
+    "car": 101,
+    "unclassified": 7,
+    "truck": 14
+  }
+}
